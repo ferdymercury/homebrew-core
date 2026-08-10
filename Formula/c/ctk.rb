@@ -1,7 +1,6 @@
 class Ctk < Formula
   desc "Support code for medical imaging, surgical navigation, and related purposes"
   homepage "https://github.com/commontk/CTK"
-
   url "https://github.com/commontk/CTK/archive/refs/tags/2026.08.06.tar.gz"
   sha256 "e2d8376b2b1644ec7112d4779549cf96cb486e671f1cb6f00ac0e3f27f1379ae"
   license "Apache-2.0"
