@@ -22,6 +22,7 @@ class Ctk < Formula
     args = %w[
       -DCTK_QT_VERSION=6
       -DCTK_SUPERBUILD=OFF
+      -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON
     ]
     system "cmake", "-S", ".", "-B", "builddir", *args, *std_cmake_args
     system "cmake", "--build", "builddir"
@@ -42,7 +43,6 @@ class Ctk < Formula
            "-I#{include}/ctk-0.1",
            "-L#{lib}/ctk-0.1", "-lCTKCore",
            "-o", "test", *flags
-    ENV["LD_LIBRARY_PATH"] = "#{lib}/ctk-0.1" if OS.linux?
     system "./test"
   end
 end
